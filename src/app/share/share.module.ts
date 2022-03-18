@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -12,7 +10,7 @@ import { FormsModule } from '@angular/forms';
     NgZorroAntdModule,
     FormsModule,
   ],
-  exports:[
+  exports: [
     CommonModule,
     NgZorroAntdModule,
     FormsModule
