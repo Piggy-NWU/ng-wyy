@@ -1,7 +1,11 @@
 <div class="home">
-  <app-wy-carousel>
+  <app-wy-carousel #wycarousel [activeIndex]="carouselActiveIndex">
     <div class="carousel wrap">
-      <nz-carousel nzAutoPlay nzEffect="fade">
+      <nz-carousel
+        nzAutoPlay
+        nzEffect="fade"
+        [nzDotRender]="wycarousel.dotRef"
+        (nzBeforeChange)="OnbeforeChange($event)">
         <div class="carousel-item" nz-carousel-content *ngFor="let item of banners">
           <a [href]="item.url" target="_blank" class="banner-item">
             <img [src]="item.imageUrl">
